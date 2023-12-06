@@ -11,18 +11,18 @@ def calculate_formula():#определяет функцию calculate_formula()
 # Создание графического интерфейса
 root = tk.Tk()#создает главное окно приложения
 root.title("Подсчет по формуле")#устанавливает заголовок главного окна
-
+root.configure(background="lightyellow") # Задает цвет фона окна
 # Создание элементов интерфейса
-label = tk.Label(root, text="Введите значение x:")#создает Label с текстом “Введите значение x:”
+label = tk.Label(root, text="Введите значение x:",bg="lightyellow")#создает Label с текстом “Введите значение x:”
 label.pack()#упаковывает Label в главное окно
 
 entry = tk.Entry(root)#создает Entry для ввода значения x
 entry.pack()#упаковывает Entry в главное окно
 
-button = tk.Button(root, text="Посчитать", command=calculate_formula)#создает Button с текстом “Посчитать” и связывает его с функцией calculate_formula()
+button = tk.Button(root, text="Посчитать", command=calculate_formula, bg="Pink")#создает Button с текстом “Посчитать” и связывает его с функцией calculate_formula()
 button.pack()# упаковывает Button в главное окно
 
-label_result = tk.Label(root, text="")#создает Label для отображения результата вычисления формулы
+label_result = tk.Label(root, text="", bg="lightyellow")#создает Label для отображения результата вычисления формулы
 label_result.pack()#упаковывает Label в главное окно
 
 # Запуск приложения

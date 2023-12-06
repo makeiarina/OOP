@@ -7,8 +7,9 @@ def close_window():#определяет функцию close_window(), кото
 window = Tk()#создает главное окно приложения
 window.title('Проект 2')#устанавливает заголовок главного окна
 window.geometry('400x100')#устанавливает размеры главного окна
+window.configure(bg='lightblue')  # Изменение фона окна
 # Изменение внешнего вида окнаwindow.configure(bg='lightblue') # Изменение фона окна
-lab = Label(window, text='', font=('Arial', 14))#создает Label с пустым текстом и устанавливает шрифт Arial размером 14
+lab = Label(window, text='', font=('Arial', 14), bg='lightblue')#создает Label с пустым текстом и устанавливает шрифт Arial размером 14
 lab.grid(column=1, row=0)#размещает Label в главном окне в первом столбце и первой строке
 # Изменение размера и цвета кнопок
 btn = Button(window, text='Приветствие', font=('Arial', 14), command=clicked, width=15, bg='lightgray')#создает Button с текстом “Приветствие” и устанавливает шрифт Arial размером 14. При нажатии на кнопку будет вызываться функция clicked(). Устанавливает ширину кнопки в 15 символов и цвет фона lightgray

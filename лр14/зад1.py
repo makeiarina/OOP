@@ -45,7 +45,7 @@ check3 = Checkbutton(window, text='информационные технолог
 
 btn = Button(window, text='Принять', width=25, height=5, fg='blue', font='arial 14', command=getInfo)  # Создаем кнопку "Принять"
 
-name.pack()  # Располагаем надпись "Имя" на форме
+name.pack()  # Располагаем надпись 'Имя' на форме
 nameT.pack()  # Располагаем поле для ввода имени на форме
 lastName.pack()  # Располагаем надпись "Фамилия" на форме
 lastNameT.pack()  # Располагаем поле для ввода фамилии на форме

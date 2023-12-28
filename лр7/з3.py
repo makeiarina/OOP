@@ -1,45 +1,54 @@
 # Определение класса Flower
 class Flower:
-    # Метод инициализации, инициализирующий атрибуты объекта Flower
+    """
+    Класс для представления цветка.
+
+    Attributes:
+    name (str): Название цветка.
+    freshness (int): Уровень свежести цветка.
+    stem_length (float): Длина стебля цветка.
+    """
+
     def __init__(self, name, freshness, stem_length):
-        # Присваивание значений атрибутам объекта с использованием именованных параметров
-        self.__name = name
+        """
+        Инициализация атрибутов объекта Flower.
+
+        Args:
+        name (str): Название цветка.
+        freshness (int): Уровень свежести цветка (от 1 до 10).
+        stem_length (float): Длина стебля цветка в сантиметрах.
+        """
+        self.name = name
         self.__freshness = freshness
         self.__stem_length = stem_length
 
-    # Свойство name со встроенным геттером
     @property
     def name(self):
         return self.__name
 
-    # Сеттер для свойства name
     @name.setter
     def name(self, value):
         self.__name = value
 
-    # Свойство freshness со встроенным геттером
     @property
     def freshness(self):
         return self.__freshness
 
-    # Сеттер для свойства freshness
     @freshness.setter
     def freshness(self, value):
         self.__freshness = value
 
-    # Свойство stem_length со встроенным геттером
     @property
     def stem_length(self):
         return self.__stem_length
 
-    # Сеттер для свойства stem_length
     @stem_length.setter
     def stem_length(self, value):
         self.__stem_length = value
 
-    # Метод с магическим методом str, возвращающий строковое представление объекта Flower
     def __str__(self):
-        return f"Flower: {self.__name}, Freshness: {self.__freshness}, Stem Length: {self.__stem_length}"
+        return f"Flower: {self.__name}, Freshness: {self.__freshness}, Stem Length: {self.__stem_length} cm"
+
 
 # Создание нескольких экземпляров класса Flower с разными значениями атрибутов
 flower1 = Flower("Rose", 8, 10)
